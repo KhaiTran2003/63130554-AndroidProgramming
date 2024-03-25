@@ -1,6 +1,8 @@
 package ntu_63130554.cau2_apphenho;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,7 +13,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button btnView;
+    void TimDieuKhien(){
+        btnView = (Button) findViewById(R.id.id_btnView);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +75,15 @@ public class MainActivity extends AppCompatActivity {
                 dsdt.clear();
                 dsdt.addAll(newDsdt);
                 dt_adapter.notifyDataSetChanged();
+            }
+        });
+        //Chi tiết đối tươgnj
+        TimDieuKhien();
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentChiTietDT = new Intent(MainActivity.this, ChiTietDoiTuong.class);
+                startActivity(intentChiTietDT);
             }
         });
 
