@@ -56,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
                 edt_tenChon.setText(selectedName);
             }
         });
+        LVDoiTuong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                DoiTuong selectedDoiTuong = dsdt.get(position);
+                Intent intent = new Intent(MainActivity.this, ChiTietDoiTuong.class);
+                intent.putExtra("selectedDoiTuong", selectedDoiTuong);
+                startActivity(intent);
+            }
+        });
+
         Button btnNext = findViewById(R.id.id_btnnext);
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
