@@ -26,6 +26,7 @@ public class Interface extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);
+        
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -35,9 +36,14 @@ public class Interface extends JFrame {
         lb_title.setBounds(50, 20, 400, 20);
         contentPane.add(lb_title);
         
-        JLabel lb_title2 = new JLabel("Dãy số sau khi sắp xếp");
+        JLabel lb_title2 = new JLabel("Dãy số sau khi sắp xếp tăng dần");
         lb_title2.setBounds(50, 20, 400, 260);
         contentPane.add(lb_title2);
+        
+
+        JLabel lb_title3 = new JLabel("Dãy số sau khi sắp xếp giảm dần");
+        lb_title3.setBounds(50, 20, 400, 500);
+        contentPane.add(lb_title3);
        
 
         btn_number = new JButton[6];
@@ -73,47 +79,60 @@ public class Interface extends JFrame {
             
         }
 
-        JButton btn_sapxep = new JButton("Sắp xếp");
-        btn_sapxep.setSize(new Dimension(100, 50));
-        btn_sapxep.setLocation(new Point(550, 280));
-        contentPane.add(btn_sapxep);
-        btn_sapxep.addActionListener(new ActionListener() {
+        JButton btn_sapXepTang = new JButton("Sắp xếp tăng");
+        btn_sapXepTang.setSize(new Dimension(100, 50));
+        btn_sapXepTang.setLocation(new Point(550, 280));
+        contentPane.add(btn_sapXepTang);
+        btn_sapXepTang.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SapXep();
+                SapXepTang();
+            }
+        });
+        
+        JButton btn_sapXepGiam = new JButton("Sắp xếp Giảm");
+        btn_sapXepGiam.setSize(new Dimension(100, 50));
+        btn_sapXepGiam.setLocation(new Point(350, 280));
+        contentPane.add(btn_sapXepGiam);
+        btn_sapXepGiam.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SapXepTang();
             }
         });
     }
-        public void SapXep() {
-            int[] value = new int[6];
-            for (int i = 0; i < textData.length; i++) {
-                try {
-                    value[i] = Integer.parseInt(textData[i].getText());
-                } catch (NumberFormatException ex) {
-                    ex.printStackTrace();
-                }
-            }
-            Arrays.sort(value);
-            for (int i = 0; i < textResult.length; i++) {
-            	textResult[i].setText(Integer.toString(value[i]));
+    public void SapXepTang() {
+        int[] value = new int[6];
+        for (int i = 0; i < textData.length; i++) {
+            try {
+                value[i] = Integer.parseInt(textData[i].getText());
+            } catch (NumberFormatException ex) {
+                ex.printStackTrace();
             }
         }
+        Arrays.sort(value);
+        for (int i = 0; i < textResult.length; i++) {
+        	textResult[i].setText(Integer.toString(value[i]));
+        }
+    }
+    public void SapXepGiam() {
+        int[] value = new int[6];
+        for (int i = 0; i < textData.length; i++) {
+            try {
+                value[i] = Integer.parseInt(textData[i].getText());
+            } catch (NumberFormatException ex) {
+                ex.printStackTrace();
+            }
+        }
+        Arrays.sort(value);
+        for (int i = 0; i < textResult.length; i++) {
+        	textResult[i].setText(Integer.toString(value[i]));
+        }
+    }
+        
         
     private int RandomNumber() {
         Random random = new Random();
         return random.nextInt(100) + 1;
-    }
-    
-    
-    
-    public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
-                Interface frame = new Interface();
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
     }
 }
