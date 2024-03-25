@@ -55,9 +55,7 @@ public class Interface extends JFrame {
                     values[finalI] = RandomNumber();
                     textData[finalI].setText(Integer.toString(values[finalI]));
                     Arrays.sort(values);
-                    for (int j = 0; j < btn_number.length; j++) {
-                        btn_number[j].setText("Số " + (j + 1) + ": " + values[j]);
-                    }
+                    
                 }
             });
             
@@ -71,27 +69,28 @@ public class Interface extends JFrame {
         btn_sapxep.setSize(new Dimension(100, 50));
         btn_sapxep.setLocation(new Point(650, 450));
         contentPane.add(btn_sapxep);
-        
+        btn_sapxep.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SapXep();
+            }
+        });
+    }
         public void SapXep() {
-            // Lấy các giá trị từ textData
             int[] valuesToSort = new int[6];
             for (int i = 0; i < textData.length; i++) {
                 try {
                     valuesToSort[i] = Integer.parseInt(textData[i].getText());
                 } catch (NumberFormatException ex) {
-                    // Xử lý trường hợp không thể chuyển đổi sang số
                     ex.printStackTrace();
                 }
             }
-            
-            // Sắp xếp mảng giá trị
             Arrays.sort(valuesToSort);
-            
-            // Đặt lại văn bản cho các textData ở dưới
             for (int i = 0; i < textData.length; i++) {
                 textData[i].setText(Integer.toString(valuesToSort[i]));
             }
-    }
+        }
+        
     private int RandomNumber() {
         Random random = new Random();
         return random.nextInt(100) + 1;
