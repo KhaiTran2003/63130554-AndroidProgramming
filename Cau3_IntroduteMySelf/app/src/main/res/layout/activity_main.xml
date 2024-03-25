@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/img_1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,20 +25,74 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="25dp"
-                android:text="Trần Khải"/>
+                android:text="Trần Khải"
+                android:textColor="@color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="25dp"
-                android:text="Sinh viên TSN"/>
+                android:text="Sinh viên TSN"
+                android:textColor="@color/black"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="25dp"
-                android:text="Niên Khóa: 2021-2025"/>
+                android:text="Niên Khóa: 2021-2025"
+                android:textColor="@color/black"/>
 
 
         </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="THÔNG TIN CHI TIẾT"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:textColor="#F44336"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Ngày Sinh: 6/3/2003"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Địa chỉ: Nha Trang, Khánh Hòa"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Yêu thích: Chơi thể thao"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Slogan: Tiên học lễ - Hậu học văn"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Ước mơ: Tốt nghiệp đại học và được làm công việc yêu thích. Có thể độc lập tài chính giúp đỡ gia đình."
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+
     </LinearLayout>
 
 </LinearLayout>
