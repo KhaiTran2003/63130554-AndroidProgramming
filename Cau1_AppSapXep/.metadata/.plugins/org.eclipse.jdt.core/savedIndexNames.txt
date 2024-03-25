@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+F:\1_LTTBDD\BaiTapNhom\63130554-AndroidProgramming\Cau1_AppSapXep\.metadata\.plugins\org.eclipse.jdt.core

@@ -18,6 +18,7 @@ import javax.swing.border.EmptyBorder;
 public class Interface extends JFrame {
     private JButton[] btn_number;
     private JTextField[] textData;
+    private JTextField[] textResult;
     private int[] values;
 
     public Interface() {
@@ -30,16 +31,22 @@ public class Interface extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
         
-        JLabel lblSorting = new JLabel("Sắp xếp ngẫu nhiên tăng dần từ trái sang phải");
-        lblSorting.setBounds(50, 20, 400, 20);
-        contentPane.add(lblSorting);
+        JLabel lb_title = new JLabel("Sắp xếp ngẫu nhiên tăng dần từ trái sang phải");
+        lb_title.setBounds(50, 20, 400, 20);
+        contentPane.add(lb_title);
+        
+        JLabel lb_title2 = new JLabel("Dãy số sau khi sắp xếp");
+        lb_title2.setBounds(50, 20, 400, 260);
+        contentPane.add(lb_title2);
        
 
         btn_number = new JButton[6];
         textData = new JTextField[6];
-        values = new int[7];
+        textResult = new JTextField[6];
+        values = new int[6];
+        
         for (int i = 0; i < btn_number.length; i++) {
-            btn_number[i] = new JButton("Số " + (i + 1));
+            btn_number[i] = new JButton("Số thứ " + (i + 1));
             btn_number[i].setSize(new Dimension(100, 50));
             btn_number[i].setLocation(new Point(50 + i * 110, 50));
             contentPane.add(btn_number[i]);
@@ -47,6 +54,11 @@ public class Interface extends JFrame {
             textData[i] = new JTextField();
             textData[i].setBounds(50 + i * 110, 110, 100, 30);
             contentPane.add(textData[i]);
+            
+            textResult[i] = new JTextField();
+            textResult[i].setBounds(50 + i * 110, 170, 100, 30);
+            textResult[i].setEditable(false);
+            contentPane.add(textResult[i]);
             
             int finalI = i;
             btn_number[i].addActionListener(new ActionListener() {
@@ -77,17 +89,17 @@ public class Interface extends JFrame {
         });
     }
         public void SapXep() {
-            int[] valuesToSort = new int[6];
+            int[] value = new int[6];
             for (int i = 0; i < textData.length; i++) {
                 try {
-                    valuesToSort[i] = Integer.parseInt(textData[i].getText());
+                    value[i] = Integer.parseInt(textData[i].getText());
                 } catch (NumberFormatException ex) {
                     ex.printStackTrace();
                 }
             }
-            Arrays.sort(valuesToSort);
+            Arrays.sort(value);
             for (int i = 0; i < textData.length; i++) {
-                textData[i].setText(Integer.toString(valuesToSort[i]));
+                textData[i].setText(Integer.toString(value[i]));
             }
         }
         
