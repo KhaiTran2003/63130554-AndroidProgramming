@@ -4,6 +4,6 @@
 /**
  * 
  */
-module Cau1_MouseTouch {
+module Cau1_AppSapXep {
 	requires java.desktop;
 }
