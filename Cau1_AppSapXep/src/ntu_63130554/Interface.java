@@ -52,6 +52,8 @@ public class Interface extends JFrame {
         btn_number = new JButton[6];
         textData = new JTextField[6];
         textResultTangDan = new JTextField[6];
+        textResultGiamDan = new JTextField[6];
+
         values = new int[6];
         
         for (int i = 0; i < btn_number.length; i++) {
@@ -68,6 +70,11 @@ public class Interface extends JFrame {
             textResultTangDan[i].setBounds(50 + i * 110, 170, 100, 30);
             textResultTangDan[i].setEditable(false);
             contentPane.add(textResultTangDan[i]);
+            
+            textResultGiamDan[i] = new JTextField();
+            textResultGiamDan[i].setBounds(50 + i * 110, 230, 100, 30);
+            textResultGiamDan[i].setEditable(false);
+            contentPane.add(textResultGiamDan[i]);
             
             int finalI = i;
             btn_number[i].addActionListener(new ActionListener() {
@@ -133,8 +140,8 @@ public class Interface extends JFrame {
             value[i] = value[value.length - i - 1];
             value[value.length - i - 1] = temp;
         }
-        for (int i = 0; i < textResultTangDan.length; i++) {
-            textResultTangDan[i].setText(Integer.toString(value[i]));
+        for (int i = 0; i < textResultGiamDan.length; i++) {
+        	textResultGiamDan[i].setText(Integer.toString(value[i]));
         }
     }
 
