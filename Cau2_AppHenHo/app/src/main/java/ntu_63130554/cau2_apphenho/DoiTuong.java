@@ -1,6 +1,8 @@
 package ntu_63130554.cau2_apphenho;
 
-public class DoiTuong {
+import java.io.Serializable;
+
+public class DoiTuong implements Serializable {
     private String ho;
     private String ten;
     private String sdt;

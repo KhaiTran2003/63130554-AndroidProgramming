@@ -86,6 +86,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentChiTietDT);
             }
         });
+        Button btnExit = findViewById(R.id.id_btnexit);
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 }
