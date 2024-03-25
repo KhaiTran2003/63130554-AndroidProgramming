@@ -12,39 +12,36 @@ import java.util.Random;
 
 public class ManHinhCau1 extends JFrame {
 
-    private JLabel mouseLabel;
-    private Timer timer;
-    private Random random;
-    private int frameWidth;
-    private int frameHeight;
+    private JLabel[][] mouseLabels; 
+    private int numRows = 4; 
+    private int numCols = 5; 
+    private int labelWidth = 150; 
+    private int labelHeight = 150;
 
     public ManHinhCau1() {
         setTitle("Catch the Mouse");
         setSize(800, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
-        frameWidth = getContentPane().getWidth();
-        frameHeight = getContentPane().getHeight();
-
-        mouseLabel = new JLabel();
-        URL urlIconMouse = ManHinhCau1.class.getResource("icon_mouse.jpg");
-        ImageIcon mouseIcon = createResizedImageIcon(urlIconMouse, 150, 150);
-        if (mouseIcon != null) {
-            mouseLabel.setIcon(mouseIcon);
-        } else {
-            System.err.println("Lỗi");
+        mouseLabels = new JLabel[numRows][numCols];
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                JLabel mouseLabel = new JLabel();
+                URL urlIconMouse = ManHinhCau1.class.getResource("icon_mouse.jpg");
+                ImageIcon mouseIcon = createResizedImageIcon(urlIconMouse, labelWidth, labelHeight);
+                if (mouseIcon != null) {
+                    mouseLabel.setIcon(mouseIcon);
+                } else {
+                    System.err.println("Lỗi");
+                }
+                mouseLabel.setBounds(j * labelWidth, i * labelHeight, labelWidth, labelHeight);
+                getContentPane().add(mouseLabel);
+                mouseLabels[i][j] = mouseLabel;
+            }
         }
-        getContentPane().add(mouseLabel);
+        
+        getContentPane().setLayout(null);
     }
 
-
-    private void moveMouse() {
-        int x = random.nextInt(frameWidth - mouseLabel.getWidth());
-        int y = random.nextInt(frameHeight - mouseLabel.getHeight());
-        mouseLabel.setLocation(x, y);
-    }
-
-    
     protected ImageIcon createResizedImageIcon(URL url, int width, int height) {
         if (url != null) {
             try {
