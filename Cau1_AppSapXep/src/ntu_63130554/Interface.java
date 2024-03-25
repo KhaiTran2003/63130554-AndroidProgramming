@@ -7,6 +7,7 @@ import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,9 +17,11 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
 public class Interface extends JFrame {
+	
     private JButton[] btn_number;
     private JTextField[] textData;
-    private JTextField[] textResult;
+    private JTextField[] textResultTangDan;
+    private JTextField[] textResultGiamDan;
     private int[] values;
 
     public Interface() {
@@ -48,7 +51,7 @@ public class Interface extends JFrame {
 
         btn_number = new JButton[6];
         textData = new JTextField[6];
-        textResult = new JTextField[6];
+        textResultTangDan = new JTextField[6];
         values = new int[6];
         
         for (int i = 0; i < btn_number.length; i++) {
@@ -61,10 +64,10 @@ public class Interface extends JFrame {
             textData[i].setBounds(50 + i * 110, 110, 100, 30);
             contentPane.add(textData[i]);
             
-            textResult[i] = new JTextField();
-            textResult[i].setBounds(50 + i * 110, 170, 100, 30);
-            textResult[i].setEditable(false);
-            contentPane.add(textResult[i]);
+            textResultTangDan[i] = new JTextField();
+            textResultTangDan[i].setBounds(50 + i * 110, 170, 100, 30);
+            textResultTangDan[i].setEditable(false);
+            contentPane.add(textResultTangDan[i]);
             
             int finalI = i;
             btn_number[i].addActionListener(new ActionListener() {
@@ -97,7 +100,7 @@ public class Interface extends JFrame {
         btn_sapXepGiam.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SapXepTang();
+                SapXepGiam();
             }
         });
     }
@@ -111,8 +114,8 @@ public class Interface extends JFrame {
             }
         }
         Arrays.sort(value);
-        for (int i = 0; i < textResult.length; i++) {
-        	textResult[i].setText(Integer.toString(value[i]));
+        for (int i = 0; i < textResultTangDan.length; i++) {
+        	textResultTangDan[i].setText(Integer.toString(value[i]));
         }
     }
     public void SapXepGiam() {
@@ -125,11 +128,16 @@ public class Interface extends JFrame {
             }
         }
         Arrays.sort(value);
-        for (int i = 0; i < textResult.length; i++) {
-        	textResult[i].setText(Integer.toString(value[i]));
+        for (int i = 0; i < value.length / 2; i++) {
+            int temp = value[i];
+            value[i] = value[value.length - i - 1];
+            value[value.length - i - 1] = temp;
+        }
+        for (int i = 0; i < textResultTangDan.length; i++) {
+            textResultTangDan[i].setText(Integer.toString(value[i]));
         }
     }
-        
+
         
     private int RandomNumber() {
         Random random = new Random();
