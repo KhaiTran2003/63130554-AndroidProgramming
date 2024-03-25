@@ -1,10 +1,18 @@
 package ntu_63130554;
 
+import java.awt.EventQueue;
+
 public class MainSapXep {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new Interface().setVisible(true);
+		EventQueue.invokeLater(() -> {
+            try {
+                Interface frame = new Interface();
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 	}
 
 }
