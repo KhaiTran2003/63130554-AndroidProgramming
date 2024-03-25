@@ -40,9 +40,11 @@
             android:text="Choose: "
             android:textSize="20dp"/>
         <EditText
+            android:id="@+id/id_tenChon"
             android:layout_width="230dp"
             android:layout_height="wrap_content"/>
         <Button
+            android:id="@+id/id_btnView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="View"
@@ -55,19 +57,19 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal">
         <Button
+            android:id="@+id/id_btnnext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
             android:textSize="20dp"/>
-        <TextView
-            android:paddingLeft="100dp"
+        <Button
+            android:id="@+id/id_btnexit"
+            android:layout_marginLeft="100dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Page "
+            android:text="Exit"
             android:textSize="20dp"/>
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 </LinearLayout>
