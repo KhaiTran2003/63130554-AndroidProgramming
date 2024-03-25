@@ -13,12 +13,6 @@ public class ChiTietDoiTuong extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chi_tiet_doi_tuong);
-        Intent intent = getIntent();
-        if (intent != null) {
-            if (intent.hasExtra("selectedDoiTuong")) {
-                DoiTuong selectedDoiTuong = (DoiTuong) intent.getSerializableExtra("selectedDoiTuong");
-                Toast.makeText(this, selectedDoiTuong.getHo() + " " + selectedDoiTuong.getTen(), Toast.LENGTH_SHORT).show();
-            }
-        }
+
     }
 }

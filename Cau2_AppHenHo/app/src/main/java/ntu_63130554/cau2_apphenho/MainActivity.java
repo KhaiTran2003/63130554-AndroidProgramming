@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Random rand = new Random();
         ArrayList<DoiTuong> dsdt = new ArrayList<DoiTuong>();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             int ho = rand.nextInt(ds_ho.length);
             int ten = rand.nextInt(ds_Ten.length);
             int sdt = rand.nextInt(ds_SDT.length);
@@ -56,15 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 edt_tenChon.setText(selectedName);
             }
         });
-        LVDoiTuong.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                DoiTuong selectedDoiTuong = dsdt.get(position);
-                Intent intent = new Intent(MainActivity.this, ChiTietDoiTuong.class);
-                intent.putExtra("selectedDoiTuong", selectedDoiTuong);
-                startActivity(intent);
-            }
-        });
+      
 
         Button btnNext = findViewById(R.id.id_btnnext);
         btnNext.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Random các đối tượng mới
                 ArrayList<DoiTuong> newDsdt = new ArrayList<>();
-                for (int i = 0; i < 10; i++) {
+                for (int i = 0; i < 5; i++) {
                     int ho = rand.nextInt(ds_ho.length);
                     int ten = rand.nextInt(ds_Ten.length);
                     int sdt = rand.nextInt(ds_SDT.length);
