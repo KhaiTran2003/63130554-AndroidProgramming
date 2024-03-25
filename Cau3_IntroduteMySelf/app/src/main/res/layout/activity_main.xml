@@ -4,11 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/img"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/img"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="25dp"
+                android:text="Trần Khải"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="25dp"
+                android:text="Sinh viên TSN"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="25dp"
+                android:text="Niên Khóa: 2021-2025"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
