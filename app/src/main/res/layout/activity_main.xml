@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="So thu nhat: "
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edt_so1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nhap so thu nhat o day" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="So thu hai: "
+            android:textSize="18dp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edt_so2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="nhap so thu hai o day"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_cong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            />
+
+        <Button
+            android:id="@+id/btn_tru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            />
+
+        <Button
+            android:id="@+id/btn_nhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            />
+
+        <Button
+            android:id="@+id/btn_chia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ket qua: "
+            android:textSize="18dp"/>
+        <EditText
+            android:id="@+id/edt_ketqua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ket qua se hien thi o day"
+            android:enabled="false"/>
+    </LinearLayout>
+
+</LinearLayout>
