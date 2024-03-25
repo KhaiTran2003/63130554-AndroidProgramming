@@ -92,7 +92,7 @@
             android:text="Ước mơ: Tốt nghiệp đại học và được làm công việc yêu thích. Có thể độc lập tài chính giúp đỡ gia đình."
             android:textSize="25dp"
             android:textColor="@color/black"/>
-
+s
     </LinearLayout>
 
 </LinearLayout>
