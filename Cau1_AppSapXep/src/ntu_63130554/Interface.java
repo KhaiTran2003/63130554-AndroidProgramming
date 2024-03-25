@@ -31,7 +31,7 @@ public class Interface extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
         
-        JLabel lb_title = new JLabel("Sắp xếp ngẫu nhiên tăng dần từ trái sang phải");
+        JLabel lb_title = new JLabel("Mời bạn random ngẫu nhiên 6 số");
         lb_title.setBounds(50, 20, 400, 20);
         contentPane.add(lb_title);
         
@@ -72,14 +72,10 @@ public class Interface extends JFrame {
             });
             
         }
-        JTextField tf_sapxep = new JTextField();
-        tf_sapxep = new JTextField();
-        tf_sapxep.setBounds(50, 350, 700, 50);
-        contentPane.add(tf_sapxep);
-        
+
         JButton btn_sapxep = new JButton("Sắp xếp");
         btn_sapxep.setSize(new Dimension(100, 50));
-        btn_sapxep.setLocation(new Point(650, 450));
+        btn_sapxep.setLocation(new Point(550, 280));
         contentPane.add(btn_sapxep);
         btn_sapxep.addActionListener(new ActionListener() {
             @Override
@@ -98,8 +94,8 @@ public class Interface extends JFrame {
                 }
             }
             Arrays.sort(value);
-            for (int i = 0; i < textData.length; i++) {
-                textData[i].setText(Integer.toString(value[i]));
+            for (int i = 0; i < textResult.length; i++) {
+            	textResult[i].setText(Integer.toString(value[i]));
             }
         }
         
