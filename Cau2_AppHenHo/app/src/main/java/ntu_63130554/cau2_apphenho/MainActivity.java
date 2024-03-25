@@ -14,8 +14,12 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     Button btnView;
+    Button btnNext;
+    Button btnExit;
     void TimDieuKhien(){
         btnView = (Button) findViewById(R.id.id_btnView);
+        btnNext = (Button) findViewById(R.id.id_btnnext);
+        btnExit = (Button) findViewById(R.id.id_btnexit);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 edt_tenChon.setText(selectedName);
             }
         });
-      
 
-        Button btnNext = findViewById(R.id.id_btnnext);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentChiTietDT);
             }
         });
-        Button btnExit = findViewById(R.id.id_btnexit);
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
