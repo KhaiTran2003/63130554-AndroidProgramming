@@ -42,7 +42,7 @@ public class Interface extends JFrame {
         
 
         JLabel lb_title3 = new JLabel("Dãy số sau khi sắp xếp giảm dần");
-        lb_title3.setBounds(50, 20, 400, 500);
+        lb_title3.setBounds(50, 20, 400, 380);
         contentPane.add(lb_title3);
        
 
@@ -80,8 +80,8 @@ public class Interface extends JFrame {
         }
 
         JButton btn_sapXepTang = new JButton("Sắp xếp tăng");
-        btn_sapXepTang.setSize(new Dimension(100, 50));
-        btn_sapXepTang.setLocation(new Point(550, 280));
+        btn_sapXepTang.setSize(new Dimension(150, 50));
+        btn_sapXepTang.setLocation(new Point(550, 300));
         contentPane.add(btn_sapXepTang);
         btn_sapXepTang.addActionListener(new ActionListener() {
             @Override
@@ -91,8 +91,8 @@ public class Interface extends JFrame {
         });
         
         JButton btn_sapXepGiam = new JButton("Sắp xếp Giảm");
-        btn_sapXepGiam.setSize(new Dimension(100, 50));
-        btn_sapXepGiam.setLocation(new Point(350, 280));
+        btn_sapXepGiam.setSize(new Dimension(150, 50));
+        btn_sapXepGiam.setLocation(new Point(350, 300));
         contentPane.add(btn_sapXepGiam);
         btn_sapXepGiam.addActionListener(new ActionListener() {
             @Override
