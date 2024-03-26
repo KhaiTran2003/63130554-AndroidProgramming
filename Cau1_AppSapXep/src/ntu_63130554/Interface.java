@@ -53,7 +53,6 @@ public class Interface extends JFrame {
         textData = new JTextField[6];
         textResultTangDan = new JTextField[6];
         textResultGiamDan = new JTextField[6];
-
         values = new int[6];
         
         for (int i = 0; i < btn_number.length; i++) {
