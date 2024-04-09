@@ -2,11 +2,11 @@ package com.example.recyclerviewexemple;
 
 public class LandScape {
     String landImageFileName;
-    String landCation;
+    String landCaption;
 
     public LandScape(String landImageFileName, String landCation) {
         this.landImageFileName = landImageFileName;
-        this.landCation = landCation;
+        this.landCaption = landCation;
     }
 
     public String getLandImageFileName() {
@@ -17,11 +17,11 @@ public class LandScape {
         this.landImageFileName = landImageFileName;
     }
 
-    public String getLandCation() {
-        return landCation;
+    public String getLandCaption() {
+        return landCaption;
     }
 
-    public void setLandCation(String landCation) {
-        this.landCation = landCation;
+    public void setLandCaption(String landCaption) {
+        this.landCaption = landCaption;
     }
 }
