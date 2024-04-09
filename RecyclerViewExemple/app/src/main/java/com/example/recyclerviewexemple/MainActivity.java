@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerViewLandscape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecyclerView(){
-        ArrayList<LandScape> dsDuLieu = new ArrayList<>();
+        ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
         LandScape landScape1 = new LandScape("img","Ngôi nhà 1");
         dsDuLieu.add(landScape1);
         dsDuLieu.add(new LandScape("img_1","Ngôi nhà 2"));
