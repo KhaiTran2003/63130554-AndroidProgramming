@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+
     LandScapeAdapter landScapeAdapter;
     ArrayList<LandScape> recyclerViewDatas;
     RecyclerView recyclerViewLandscape;
