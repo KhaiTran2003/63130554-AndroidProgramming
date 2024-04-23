@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode==RESULT_OK){
                 String hoTen = data.getStringExtra("FN");
                 String sinhVienTruong = data.getStringExtra("SV");
-                TextView tvName = (TextView) findViewById(R.id.edt_hoten);
-                TextView tvSinhVien  =(TextView) findViewById(R.id.edt_sinhvientruong);
+                TextView tvName = (TextView) findViewById(R.id.tv_hoTen);
+                TextView tvSinhVien  =(TextView) findViewById(R.id.tv_sinhVienTruong);
                 tvName.setText(hoTen);
                 tvSinhVien.setText(sinhVienTruong);
             }
