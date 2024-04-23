@@ -6,22 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Trang thứ 2"
-        android:textSize="30dp"
-        android:gravity="center">
-    </TextView>
+        android:textSize="30dp"></TextView>
 
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:text="Quay lại trang đầu"
-        android:textSize="16dp"
         android:layout_gravity="center"
         android:gravity="center"
-        >
+        android:onClick="QuayLai"
+        android:text="Quay lại trang đầu"
+        android:textSize="16dp">
 
     </Button>
 
