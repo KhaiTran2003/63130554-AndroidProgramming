@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/id_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/id_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile" />
+    <item
+        android:id="@+id/id_time"
+        android:icon="@drawable/baseline_access_time_filled_24"
+        android:title="Time" />
 </menu>
