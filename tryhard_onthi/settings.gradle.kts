@@ -13,13 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TuHoc"
-include(":app")
-include(":app")
-include(":app")
-include(":app")
-include(":app")
-include(":app")
-include(":app")
+rootProject.name = "Tryhard_OnThi"
 include(":app")
  
