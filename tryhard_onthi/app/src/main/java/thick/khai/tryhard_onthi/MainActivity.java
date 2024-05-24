@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 else if(itemID==R.id.nav_cau4){
                     fragment = new Cau4Fragment();
                 }
-                else if(itemID==R.id.nav_cau5) {
+                else if(itemID==R.id.frameLayout5) {
                     fragment = new Cau5Fragment();
                 }
                 if(fragment!=null){
