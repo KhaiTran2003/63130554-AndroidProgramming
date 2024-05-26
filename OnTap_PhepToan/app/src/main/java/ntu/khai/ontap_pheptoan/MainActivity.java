@@ -30,43 +30,55 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TimDieuKhien();
 
+        nutCong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1 = edtSoA.getText().toString();
+                Float soA = Float.parseFloat(so1);
+                String so2 = edtSoB.getText().toString();
+                Float soB = Float.parseFloat(so2);
+                Float kq = soA + soB;
+                String chuoiKQ = String.valueOf(kq);
+                edtKQ.setText(chuoiKQ);
+            }
+        });
+        nutTru.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1 = edtSoA.getText().toString();
+                String so2 = edtSoB.getText().toString();
+                Float soA = Float.parseFloat(so1);
+                Float soB = Float.parseFloat(so2);
+                Float kq = soA - soB;
+                String chuoiKQ = String.valueOf(kq);
+                edtKQ.setText(chuoiKQ);
+            }
+        });
+        nutNhan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1 = edtSoA.getText().toString();
+                String so2 = edtSoB.getText().toString();
+                Float soA = Float.parseFloat(so1);
+                Float soB = Float.parseFloat(so2);
+                Float kq = soA*soB;
+                String chuoiKQ = String.valueOf(kq);
+                edtKQ.setText(chuoiKQ);
+            }
+        });
+        nutChia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1 = edtSoA.getText().toString();
+                String so2 = edtSoB.getText().toString();
+                Float soA = Float.parseFloat(so1);
+                Float soB = Float.parseFloat(so2);
+                Float kq = soA/soB;
+                String chuoiKQ = String.valueOf(kq);
+                edtKQ.setText(chuoiKQ);
+            }
+        });
     }
 
-    public void XuLyCong(View v){
-        String soA = edtSoA.getText().toString();
-        String soB = edtSoB.getText().toString();
-        Float so1 = Float.parseFloat(soA);
-        Float so2 = Float.parseFloat(soB);
-        float kq = so1 + so2;
-        String chuoiKQ = String.valueOf(kq);
-        edtKQ.setText(chuoiKQ);
-    }
-    public void XuLyTru(View v){
-        String so1 = edtSoA.getText().toString();
-        String so2 = edtSoB.getText().toString();
-        Float soA = Float.parseFloat(so1);
-        Float soB = Float.parseFloat(so2);
-        Float kq = soA - soB;
-        String chuoiKQ = String.valueOf(kq);
-        edtKQ.setText(chuoiKQ);
-    }
-    public void XuLyNhan(View v){
-        String so1 = edtSoA.getText().toString();
-        String so2 = edtSoB.getText().toString();
-        Float soA = Float.parseFloat(so1);
-        Float soB = Float.parseFloat(so2);
-        Float kq = soA * soB;
-        String chuoiKQ = String.valueOf(kq);
-        edtKQ.setText(chuoiKQ);
-    }
-    public void XuLyChia(View v){
-        String so1 = edtSoA.getText().toString();
-        String so2 = edtSoB.getText().toString();
-        Float soA = Float.parseFloat(so1);
-        Float soB = Float.parseFloat(so2);
-        Float kq = soA / soB;
-        String chuoiKQ = String.valueOf(kq);
-        edtKQ.setText(chuoiKQ);
-    }
 
 }

@@ -59,7 +59,7 @@
             android:layout_margin="5dp"
             android:text="+"
             android:textSize="24dp"
-            android:onClick="XuLyCong"/>
+            />
         <Button
             android:id="@+id/id_btnTru"
             android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:layout_margin="5dp"
             android:text="-"
             android:textSize="24dp"
-            android:onClick="XuLyTru"/>
+            />
         <Button
             android:id="@+id/id_btnNhan"
             android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_margin="5dp"
             android:text="*"
             android:textSize="24dp"
-            android:onClick="XuLyNhan"/>
+            />
         <Button
             android:id="@+id/id_btnChia"
             android:layout_width="wrap_content"
@@ -83,7 +83,7 @@
             android:layout_margin="5dp"
             android:text="/"
             android:textSize="24dp"
-            android:onClick="XuLyChia"/>
+            />
     </LinearLayout>
     <LinearLayout
         android:layout_marginTop="15dp"
