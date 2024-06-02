@@ -17,6 +17,7 @@
             android:layout_gravity="center_horizontal"
             />
         <TextView
+            android:id="@+id/id_tvCaption"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Chào bạn"
