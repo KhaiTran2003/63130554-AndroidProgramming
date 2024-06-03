@@ -19,17 +19,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         recyleViewData = getDataForRecycleView();
         recyclerViewLandScape = findViewById(R.id.id_recyleview);
-        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+        //dọc
+//        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this);
+//        recyclerViewLandScape.setLayoutManager(layoutLinear);
+        //ngang
+        RecyclerView.LayoutManager layoutLinear = new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerViewLandScape.setLayoutManager(layoutLinear);
+
         landScapeAdapter = new LandScapeAdapter(this,recyleViewData);
         recyclerViewLandScape.setAdapter(landScapeAdapter);
     }
     ArrayList<LandScape> getDataForRecycleView(){
         ArrayList<LandScape> dsDuLieu = new ArrayList<LandScape>();
-        LandScape lc1 = new LandScape("avarta","Its me");
-        dsDuLieu.add(lc1);
+        dsDuLieu.add(new LandScape("avarta","du lịch"));
         dsDuLieu.add(new LandScape("dulich1","du lịch"));
-        dsDuLieu.add(new LandScape("dulich2","du lịch"));
         dsDuLieu.add(new LandScape("tinhtoan1","tinhtoan1"));
         dsDuLieu.add(new LandScape("tinhtoan2","dtinhtoan2"));
         return dsDuLieu;
