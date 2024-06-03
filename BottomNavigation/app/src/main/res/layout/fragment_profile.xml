@@ -1,17 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:paddingTop="50dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_margin="10dp"
+            android:id="@+id/id_imgAvarta"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/avarta"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#BCAAAA"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="TRẦN KHẢI"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="-----------------------"
+                android:textSize="20dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="SOFTWAVE DEVELOPER"
+                android:textSize="20dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Đây là Profile"
-        android:textSize="30dp"
-        android:gravity="center_horizontal"/>
+        android:orientation="horizontal">
+        <LinearLayout
+            android:background="#E35D33"
+            android:layout_margin="10dp"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-</FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="CONTACT"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="khai@gamil.com"
+                android:textSize="18dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="0101010101"
+                android:textSize="18dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Nha Trang"
+                android:textSize="18dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="SKILLS"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Thông thạo C, C#, C++, Java, Python"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Tin học văn phòng gồm: Word, PP, Excel 8/10"
+                android:textSize="18dp"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="EDUCATION"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textSize="20dp"
+                android:text="Nha Trang University"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/bg1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="WORK EXPERIENCE"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="~ 1 năm làm viê tại FPT Software" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="~ 2 năm kinh nghiệm làm việc với Android Studio"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="~ 2 năm kinh nghiệm làm việc với Android Studio"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="ATTITUDE"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="~ Luôn luôn làm việc,học tập đúng giờ"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textSize="20dp"
+                android:text="~ Tính kỉ luật cao"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:text="~ Luôn học hỏi phấn đấu"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
