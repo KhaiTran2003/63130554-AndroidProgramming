@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_navhome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/home1"
+        android:title="Home" />
+    <item
+        android:id="@+id/id_navCau1"
+        android:icon="@drawable/dulichj2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Câu1" />
+    <item
+        android:id="@+id/id_navCau2"
+        android:icon="@drawable/music1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Câu2" />
+    <item
+        android:id="@+id/id_navCau3"
+        android:icon="@drawable/tinhtoan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Câu3" />
+    <item
+        android:id="@+id/id_navMyProfile"
+        android:icon="@drawable/myprofile2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Myprofile" />
+</menu>
