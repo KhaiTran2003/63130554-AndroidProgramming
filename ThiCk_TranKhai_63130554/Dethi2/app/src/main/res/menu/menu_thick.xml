@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/img"
+        android:title="Welcome" />
+    <item
+        android:id="@+id/id_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/img_1"
+        android:title="Unit" />
+    <item
+        android:id="@+id/id_welkcoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/img_2"
+        android:title="WelknownCoffee" />
+    <item
+        android:id="@+id/id_subjects"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/img_3"
+        android:title="Subjects" />
+    <item
+        android:id="@+id/id_myCV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/img_4"
+        android:title="MyCV" />
+</menu>
